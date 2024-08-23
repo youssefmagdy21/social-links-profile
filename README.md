@@ -20,7 +20,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://www.frontendmentor.io/solutions/social-links-icons-using-css-grid-aYcQSirXBi](https://www.frontendmentor.io/solutions/social-links-icons-using-css-grid-aYcQSirXBi)
+- Solution URL: [https://www.frontendmentor.io/solutions/social-links-profile-using-css-grid-7Cihjyrsk7](https://www.frontendmentor.io/solutions/social-links-profile-using-css-grid-7Cihjyrsk7)
 - Live Site URL: [https://youssefmagdy21.github.io/social-links-profile/](https://youssefmagdy21.github.io/social-links-profile/)
 
 ## Built with
