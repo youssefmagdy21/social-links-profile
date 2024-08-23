@@ -91,9 +91,7 @@ body {
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: 1.5rem;
-	/* place-items: center; */
 	background-color: var(--clr-grey-800);
-	/* padding: 3rem 2rem; */
 	padding: 1.5rem;
 	border-radius: 0.75rem;
 	max-width: 90vw;
@@ -101,8 +99,8 @@ body {
 
 .profile-img {
 	border-radius: 50%;
-	width: 4.5rem;
-	height: 4.5rem;
+	width: 92px;
+	height: 92px;
 	justify-self: center;
 }
 
@@ -140,7 +138,7 @@ body {
 
 @media screen and (min-width: 600px) {
 	.card-container {
-		padding: 2rem;
+		padding: 2.5rem;
 		width: 24rem;
 	}
 
