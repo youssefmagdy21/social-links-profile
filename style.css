@@ -2,8 +2,9 @@
 
 /* Variables */
 :root {
-	--clr-green: hsl(75, 94%, 57%);
+	--clr-green: hwb(75 16% 3%);
 	--clr-white: hsl(0, 0%, 100%);
+	--clr-white-distorted: hsla(0, 0%, 100%, 70%);
 	--clr-grey-700: hsl(0, 0%, 20%);
 	--clr-grey-800: hsl(0, 0%, 12%);
 	--clr-grey-900: hsl(0, 0%, 8%);
@@ -46,19 +47,23 @@ html:focus-within {
 html,
 body {
 	height: 100%;
+	-webkit-tap-highlight-color: transparent;
 }
 
 /* Set core body defaults */
 body {
 	text-rendering: optimizeSpeed;
-	line-height: 1.5;
+	line-height: 1;
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
 	text-decoration-skip-ink: auto;
 }
-
+a {
+	color: inherit;
+	text-decoration: inherit;
+}
 /* Make images easier to work with */
 img,
 picture,
@@ -69,3 +74,77 @@ canvas {
 	display: block;
 }
 /* ------------CSS Resets------------ */
+
+body {
+	height: 100dvh;
+	width: 100%;
+	display: grid;
+	place-content: center;
+	background-color: var(--clr-grey-900);
+	color: var(--clr-white);
+	font-family: var(--ff-body);
+	font-size: 0.875rem;
+	text-align: center;
+}
+
+.card-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.5rem;
+	/* place-items: center; */
+	background-color: var(--clr-grey-800);
+	/* padding: 3rem 2rem; */
+	padding: 1.5rem;
+	border-radius: 0.75rem;
+	max-width: 90vw;
+}
+
+.profile-img {
+	border-radius: 50%;
+	width: 4.5rem;
+	height: 4.5rem;
+	justify-self: center;
+}
+
+.profile-info--name {
+	font-size: 24px;
+	font-weight: var(--fw-medium);
+	margin-bottom: 1rem;
+}
+
+.profile-info--address {
+	color: var(--clr-green);
+	font-weight: var(--fw-medium);
+}
+
+.person-title {
+	color: var(--clr-white-distorted);
+}
+
+.social-links {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1rem;
+	font-weight: var(--fw-bold);
+}
+
+.social-links a {
+	background-color: var(--clr-grey-700);
+	padding-block: 1rem;
+	border-radius: 0.375rem;
+}
+.social-links a:is(:hover, :focus, :active) {
+	background-color: var(--clr-green);
+	color: var(--clr-grey-800);
+}
+
+@media screen and (min-width: 600px) {
+	.card-container {
+		padding: 2rem;
+		width: 24rem;
+	}
+
+	.social-links a {
+		transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+	}
+}
